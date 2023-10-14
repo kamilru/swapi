@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameComponent } from './game.component';
 import { RouterModule, Routes } from '@angular/router';
+import { CardComponent } from './components/card/card.component';
+import {MatCardModule} from '@angular/material/card';
 
 const routes: Routes = [
   {
@@ -12,11 +14,13 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    GameComponent
+    GameComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MatCardModule
   ]
 })
 export class GameModule { }
