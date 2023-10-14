@@ -1,5 +1,19 @@
 .swapi {
     &__title {
         font-size: 3.4em;
+        margin-bottom: 1em;
+        text-align: center;
     }
+
+    &__cards {
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
+    }
+}
+
+:host {
+    display: block;
+    z-index: 1;
+    width: 100%;
 }

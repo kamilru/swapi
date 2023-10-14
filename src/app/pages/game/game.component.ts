@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent {
-
+  rightCardData: any;
+  leftCardData: any;
+  rightCardScore: number = 0;
+  leftCardScore: number = 0;
 }

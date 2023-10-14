@@ -12,7 +12,7 @@
     align-items: center;
 
     &__box {
-        background-color: lighten(colors.$gray, 8%);
+        background-color: lighten(colors.$gray, 7%);
         min-height: 70vh;
         max-width: 1420px;
         width: 70vw;
@@ -22,5 +22,18 @@
         flex-direction: column;
         align-items: center;
         padding: 5em;
+        position: relative;
+
+        &::before {
+            content: '';
+            background-image: url('/assets/Sprinkle.svg');
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
     }
 }
