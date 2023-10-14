@@ -1,0 +1,21 @@
+@use 'src/styles/colors.scss' as colors;
+
+button {
+    all: unset;
+    padding: 1.5em 1.5em;
+    border: 1px solid colors.$charcoal;
+    color: colors.$charcoal;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    letter-spacing: 3px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    
+    &:hover {
+      background: colors.$charcoal;
+      border: 1px solid colors.$charcoal;
+      color: colors.$coconut;
+      border-radius: 3em;
+    }
+}

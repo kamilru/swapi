@@ -10,6 +10,12 @@
         justify-content: space-around;
         gap: 30px;
     }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        padding-top: 3em;
+    }
 }
 
 :host {
