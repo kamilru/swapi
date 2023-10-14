@@ -10,4 +10,8 @@ export class GameComponent {
   leftCardData: any;
   rightCardScore: number = 0;
   leftCardScore: number = 0;
+
+  onGameStart(): void {
+    
+  }
 }
