@@ -1,16 +1,22 @@
-<mat-card class="swapi__card">
+<mat-card 
+[ngClass]="{
+    'swapi__card': true,
+    'swapi__card--waiting': waitingForCards,
+    'swapi__card--winner': isWinner
+}"
+>
     <mat-card-header>
-      <mat-card-title>{{data?.name || data?.model}}</mat-card-title>
-      <mat-card-subtitle>{{data?.birthYear || data?.starshipClass}}</mat-card-subtitle>
+      <mat-card-title>{{data?.name || data?.model || '-'}}</mat-card-title>
+      <mat-card-subtitle>{{data?.birthYear || data?.starshipClass || '-'}}</mat-card-subtitle>
     </mat-card-header>
-    <mat-card-content *ngIf="data">
-      <p *ngIf="data.height">Height: {{data.height}}</p>
-      <p *ngIf="data.eyeColor">Eye Color: {{data.eyeColor}}</p>
-      <p *ngIf="data.mass"><strong>Mass: {{data.mass}}</strong></p>
-      <p *ngIf="data.manufacturer">Manufacturer: {{data.manufacturer}}</p>
-      <p *ngIf="data.cost">Cost in credits: {{data.cost}}</p>
-      <p *ngIf="data.length">Length: {{data.shopLength}}</p>
-      <p *ngIf="data.crew"><strong>Crew: {{data.crew}}</strong></p>
+    <mat-card-content>
+      <p *ngIf="data?.height">Height: {{data.height}}</p>
+      <p *ngIf="data?.eyeColor">Eye Color: {{data.eye_color}}</p>
+      <p *ngIf="data?.mass"><strong>Mass: {{data.mass}}</strong></p>
+      <p *ngIf="data?.manufacturer">Manufacturer: {{data.manufacturer}}</p>
+      <p *ngIf="data?.cost">Cost in credits: {{data.cost}}</p>
+      <p *ngIf="data?.length">Length: {{data.shopLength}}</p>
+      <p *ngIf="data?.crew"><strong>Crew: {{data.crew}}</strong></p>
       <p class="swapi__card-score">Score: {{score}}</p>
     </mat-card-content>
   </mat-card>
