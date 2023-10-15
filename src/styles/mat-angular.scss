@@ -34,11 +34,11 @@ $swapi-theme: mat.define-light-theme((
 /* You can add global styles to this file, and also import other style files */
 body {
   .mat-mdc-card-title {
-    font-size: 3em;
+    font-size: 2.7em;
   }
   
   .mat-mdc-card-subtitle {
-    font-size: 2.4em;
+    font-size: 2.3em;
   }
   
   .mat-mdc-card-content {
@@ -48,7 +48,7 @@ body {
   }
   
   .mat-mdc-card-header {
-    padding: 2em 1.6em;
+    padding: 2em;
     position: relative;
 
     &::before {

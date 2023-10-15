@@ -2,10 +2,28 @@
     &__card {
         width: 100%;
         max-width: 500px;
+
+        &--waiting {
+            animation: spin .7s infinite linear;
+        }
+
+        &--winner {
+            background: #F39F5A;
+        }
     }
 }
 
 :host {
     display: flex;
     width: 100%;
+}
+
+@keyframes spin
+ {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
 }
