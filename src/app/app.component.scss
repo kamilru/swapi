@@ -12,6 +12,10 @@
     align-items: center;
     padding: 5em;
 
+    @media screen and (max-width: 767px) {
+        padding: 5em 3em;
+    }
+
     &__box {
         background-color: lighten(colors.$gray, 7%);
         min-height: 70vh;
@@ -24,6 +28,10 @@
         align-items: center;
         padding: 5em;
         position: relative;
+
+        @media screen and (max-width: 767px) {
+            width: 85vw;
+        }
 
         &::before {
             content: '';
