@@ -97,6 +97,7 @@ export class GameComponent {
   }
 
   onGameChange(value: any): void {
+    this.selectedGame = value;
     this.resetGameData();
     this.chooseGame(value);
    }
