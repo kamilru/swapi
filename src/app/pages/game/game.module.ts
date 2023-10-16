@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CardComponent } from './components/card/card.component';
 import {MatCardModule} from '@angular/material/card';
 import { ButtonComponent } from 'src/app/shared/button/button.component';
+import {MatSelectModule} from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 const routes: Routes = [
   {
@@ -22,7 +24,9 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     MatCardModule,
-    ButtonComponent
+    ButtonComponent,
+    MatSelectModule,
+    MatFormFieldModule
   ]
 })
 export class GameModule { }

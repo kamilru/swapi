@@ -2,16 +2,26 @@
     <h1 class="swapi__title">STAR WARS <sup>TM</sup></h1>
 </section>
 
+<section *ngIf="!gameStarted" class="swapi__start-game">
+    <h2 class="swapi__subtitle">Witaj, rozpocznij gre!</h2>
+</section>
+
+<section class="swapi__selection">
+    <mat-form-field appearance="fill">
+        <mat-label>Choose Card Subject</mat-label>
+        <mat-select [value]="selectedGame" (valueChange)="onGameChange($event)">
+          <mat-option [value]="'PEOPLE'">People</mat-option>
+          <mat-option [value]="'STARSHIPS'">Starships</mat-option>
+        </mat-select>
+      </mat-form-field>
+</section>
+
 <section *ngIf="gameStarted" class="swapi__cards">
     <app-card [waitingForCards]="waitingForCards" [score]="leftCardScore" [data]="leftCardData"></app-card>
     <app-card [waitingForCards]="waitingForCards" [score]="rightCardScore" [data]="rightCardData"></app-card>
 </section>
 
-<section *ngIf="!gameStarted" class="swapi__start-game">
-    <h2 class="swapi__subtitle">Witaj, rozpocznij gre!</h2>
-</section>
-
 <section class="swapi__buttons">
-    <app-button (clicked)="onGameStart()" [label]="'Let\'s Play!'"></app-button>
+    <app-button (clicked)="chooseGame(selectedGame)" [label]="'Let\'s Play!'"></app-button>
     <a [routerLink]="" (click)="resetGame()">Reset Game</a>
 </section>

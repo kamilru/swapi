@@ -10,10 +10,21 @@
         text-align: center;
     }
 
+    &__selection {
+        display: flex;
+        justify-content: center;
+        padding: 2em 0;
+    }
+
     &__cards {
         display: flex;
         justify-content: space-around;
         gap: 30px;
+        margin-bottom: 3.4em;
+
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__buttons {
@@ -22,7 +33,6 @@
         align-items: center;
         gap: 20px;
         flex-direction: column;
-        padding-top: 3.4em;
 
         a {
             text-decoration: underline;
